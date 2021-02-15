@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "terminus:pixelsize=12:antialias=false:autohint=false";
+static int borderpx = 24;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -96,30 +96,32 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#000000",
+	"#ed1515",
+	"#11d116",
+	"#f67400",
+	"#1d99f3",
+	"#9b59b6",
+	"#1abc9c",
+	"#fcfcfc",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#7f8c8d",
+	"#c0392b",
+	"#1cdc9a",
+	"#fdbc4b",
+	"#3daee9",
+	"#8e44ad",
+	"#16a085",
+	"#ffffff",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#1abc9c", /* 256 -> cursor */
+	"#555555", /* 257 -> rev cursor */
+	"#000000", /* 258 -> bg */
+	"#ffffff", /* 259 -> fg */
 };
 
 
